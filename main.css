@@ -1,0 +1,207 @@
+/* global style */
+/* This CSS file is used to style the HTML document. It includes styles for the body, headings, paragraphs, lists, tables, and a footer. The styles are responsive and adjust based on the screen size. */
+/* CSS Reset */
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(0, 0%, 20%);
+  --font-mono: "Courier New", Courier, monospace;
+  --font-serif: "Georgia", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-bottom: 6rem;
+}
+
+/* main style..... */
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 2rem 0 1rem 0;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h2:first-of-type {
+  padding-bottom: 0.6rem;
+}
+
+h2:not(:first-of-type) {
+  border-top: 1px solid lightgray;
+  margin: 1.5rem 0 0 0;
+  padding: 1.5rem 0 1rem 0;
+}
+
+h2,
+li::marker,
+.measurements {
+  color: hsl(14, 45%, 36%);
+}
+
+p,
+li,
+td {
+  font-size: 1rem;
+  color: hsl(30, 10%, 34%);
+  margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  padding-left: 1rem;
+  line-height: 2rem;
+}
+
+ol li {
+  padding: 0 0 0.7rem 1rem;
+  line-height: 1.4rem;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+table td {
+  text-indent: 2rem;
+  border-bottom: 1px solid lightgray;
+  padding: 0.8rem 0 1rem 0;
+}
+
+.container {
+  max-width: 720px;
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  margin: 5rem auto;
+  border-radius: 1.1rem;
+  padding: 2rem;
+}
+
+.prep-time {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prep-time h3 {
+  color: hsl(332, 51%, 32%);
+}
+
+.bold {
+  font-weight: 700;
+  color: hsl(24, 5%, 18%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+}
+
+.footer p {
+  color: red;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: hsl(0, 0%, 20%);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  h2 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 0.8rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p,
+  li,
+  td {
+    font-size: 0.9rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  ul li,
+  ol li {
+    padding-left: 0.5rem;
+    line-height: 1.4rem;
+  }
+
+  .footer {
+    font-size: clamp(0.7rem, 4vw, 0.8rem);
+    padding: 0.6rem 0.4rem;
+  }
+}
